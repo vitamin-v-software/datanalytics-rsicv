@@ -1,0 +1,63 @@
+# ======================
+# Python cache files
+# ======================
+__pycache__/
+*.py[cod]
+*$py.class
+
+# ======================
+# Results and samples (keep directories, ignore contents except .gitkeep)
+# ======================
+results/*
+!results/.gitkeep
+
+samples/*
+!samples/.gitkeep
+
+# ======================
+# Logs
+# ======================
+*.log
+
+# ======================
+# Virtual environments and packaging
+# ======================
+venv/
+env/
+*.egg-info/
+dist/
+build/
+
+# ======================
+# IDE / editor files
+# ======================
+.vscode/
+.idea/
+*.iml
+*.swp
+*.bak
+*~
+
+# ======================
+# PyTorch checkpoints or saved models (optional)
+# ======================
+*.pt
+*.pth
+*.ckpt
+
+# ======================
+# Dataset files (keep small dataset)
+# ======================
+# Do NOT ignore your dataset/images
+# *.JPEG
+# *.png
+# *.jpg
+# *.bmp
+# *.tif
+# *.tiff
+
+# ======================
+# Shell scripts temp files
+# ======================
+*.sh~
+
