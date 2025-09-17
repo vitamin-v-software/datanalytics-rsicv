@@ -27,11 +27,17 @@ pip install https://github.com/vitamin-v-software/datanalytics-rsicv/releases/do
 By executing the following command, you should already obtain the above PyTorch and TorchVision versions, proving that the packages are installed on your venv (if using one):
 
 ```bash
+# PyTorch test
 python3 -c "import torch; print('Torch version:', torch.__version__)" 
+
+# TorchVision test
+python3 -c "import torchvision; print('Torchvision version:', torchvision.__version__)"
+
 ```
 
 A positve output would be:
 
 ```bash
 Torch version: 2.9.0a0+gita714437
+Torchvision version: 0.20.1a0+3ac97aa
 ```
