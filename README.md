@@ -41,3 +41,24 @@ A positve output would be:
 Torch version: 2.9.0a0+gita714437
 Torchvision version: 0.20.1a0+3ac97aa
 ```
+
+
+### Train a workload
+
+Inside the workloads directory you will find 2 models, Vgg19 and GoogleNet. Vgg19 is heavier than GooglNet, for embedded and low performance devices, or faster runs, it is recommended to use GoogleNet.
+Both directories contain a python script called `load_pretrained_model.py` which downloads and saves a pretrained model (vgg19 or googlenet). This step is optional (but recommended), as you can upload your own custom pretrained model or weights. For a quick test, this script comes handful.
+Also on the workloads directory, you will see a data directory that contains a tiny subset of the ImageNet\_1K dataset. As you can upload your own dataset, using this one is optional, but recommended for quick tests or low performance devices. If using your own dataset, update `train_config.py` (in vgg19) or `config.py` (in googlenet) with the new data path.
+
+Steps guide summary:
+
+```bash
+source ~/<your-venv>/bin/activate # optional and if not previously sourced
+
+python load_pretrained_<model>.py # optional (you can upload your own weights)
+
+python train.py # For a quick training test
+
+perf stat -d -d -d python train.py # To benchmark your machine on a multicore environment
+
+taskset 0x1 perf stat -d -d -d python train.py # To benchmark your machine on a single core environment
+```
