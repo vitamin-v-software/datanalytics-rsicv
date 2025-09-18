@@ -1,6 +1,6 @@
 # VGG19 – PyTorch (Modified)
 
-This repository is a **modified version** of [VGG-PyTorch](https://github.com/ZhiqiangZhangCUG/VGG-PyTorch),  
+This directory is a **modified version** of [VGG-PyTorch](https://github.com/ZhiqiangZhangCUG/VGG-PyTorch),  
 
 ## Additions in This Fork
 
@@ -18,4 +18,3 @@ All other scripts (training, testing, dataset preparation) remain compatible wit
 ## License
 
 This repository retains the license of the original work (see [LICENSE](LICENSE)).
-
